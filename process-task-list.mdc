@@ -8,7 +8,7 @@ alwaysApply: false
 Guidelines for managing task lists in markdown files to track progress on completing a PRD
 
 ## Task Implementation
-- **One sub-task at a time:** Do **NOT** start the next sub‑task until you ask the user for permission and they say "yes" or "y"
+- **One sub-task at a time:** Do **NOT** start the next sub‑task until you ask the user for permission and they say "yes" or "y". The user can ask you to proceed with an entire parent task, including all of its subtasks, but this is NOT the default behavior. Only proceed as such if the user asks you to proceed with implementation for an entire parent-level task.
 - **Completion protocol:**  
   1. When you finish a **sub‑task**, immediately mark it as completed by changing `[ ]` to `[x]`.
   2. If **all** subtasks underneath a parent task are now `[x]`, follow this sequence:
@@ -26,13 +26,13 @@ Guidelines for managing task lists in markdown files to track progress on comple
         git commit -m "feat: add payment validation logic" -m "- Validates card type and expiry" -m "- Adds unit tests for edge cases" -m "Related to T123 in PRD"
         ```
   3. Once all the subtasks are marked completed and changes have been committed, mark the **parent task** as completed.
-- Stop after each sub‑task and wait for the user's go‑ahead.
+- Stop after each sub‑task and wait for the user's go‑ahead, unless the user has explicitly asked you to implement an entire parent task.
 
 ## Task List Maintenance
 
 1. **Update the task list as you work:**
    - Mark tasks and subtasks as completed (`[x]`) per the protocol above.
-   - Add new tasks as they emerge.
+   - Add new tasks as they emerge, placing them in the correct sequence and updating sequential number formatting for any relevant preceeding or proceeding subtasks.
 
 2. **Maintain the "Relevant Files" section:**
    - List every file created or modified.
